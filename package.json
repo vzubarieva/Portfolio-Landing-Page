@@ -1,0 +1,14 @@
+{
+  "name": "ft_wk1_and_pt_wk2_code_review",
+  "version": "1.0.0",
+  "description": "template for first code review at Epicodus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Epicodus",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.7.0"
+  }
+}
