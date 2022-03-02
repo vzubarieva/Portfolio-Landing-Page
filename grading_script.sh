@@ -89,20 +89,26 @@ run_htmlhint() {
 }
 
 
-
-
   REVIEWOUTPUT=./review.md
+  if [ -f "$REVIEWOUTPUT" ]; then
+  rm review.md
+  fi
 
-    printf "## Intro - Git, HTML, & CSS\n\n" >> "$REVIEWOUTPUT"
-    
-    check_commit_history >> "$REVIEWOUTPUT"
-    printf "\n" >> "$REVIEWOUTPUT"
+  date=$(date +'%m/%d/%Y')
+  time=$(date +'%r')
 
-    check_html_tags >> "$REVIEWOUTPUT"
-    check_css >> "$REVIEWOUTPUT"
-    readme_exists >> "$REVIEWOUTPUT"
-    check_ghpages >> "$REVIEWOUTPUT"
-    run_htmlhint >> "$REVIEWOUTPUT"
+  printf "$date \n" >> "$REVIEWOUTPUT"
+  printf "$time \n\n" >>  "$REVIEWOUTPUT"
 
+  printf "## Intro to Programming - Git, HTML & CSS \n\n" >> "$REVIEWOUTPUT"
+  
+  check_commit_history >> "$REVIEWOUTPUT"
+  printf "\n" >> "$REVIEWOUTPUT"
+
+  check_html_tags >> "$REVIEWOUTPUT"
+  check_css >> "$REVIEWOUTPUT"
+  readme_exists >> "$REVIEWOUTPUT"
+  check_ghpages >> "$REVIEWOUTPUT"
+  run_htmlhint >> "$REVIEWOUTPUT"
 
 
