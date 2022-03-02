@@ -1,0 +1,6 @@
+{
+  "doctype-first": true,
+  "attr-value-double-quotes": false,
+  "attr-value-single-quotes": false,
+  "attr-value-not-empty": false
+}
