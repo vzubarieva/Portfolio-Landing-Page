@@ -9,7 +9,6 @@
   "author": "Epicodus",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.7.0",
     "htmlhint": "^1.1.2"
   }
 }
