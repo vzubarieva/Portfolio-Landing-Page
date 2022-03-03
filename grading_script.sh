@@ -60,11 +60,11 @@ check_css() {
 }
 
 check_html_tags() {
-  # Strips all comments from html and saves to backup.html. This ensures that html_tags aren't in comments.
-  # MAC and LINUX users - use this line only:
-  tidy -quiet -asxml -indent -wrap 0 --force-output true --hide-comments 1 *.html > backup.html
-  # PC users - use this line only:
-  # sed '/-->$/d' *.html > backup.html
+  if [ "$(uname)" == "Darwin" ] || [ "$(uname)" == "Linux" ]; then
+    tidy -quiet -asxml -indent -wrap 0 --force-output true --hide-comments 1 *.html > backup.html
+  else
+    --hide-comments 1 *.html > backup.html
+  fi
 
   elements=( 'p' 'h[1-6]' 'ul' 'ol' 'li' 'em' 'strong' 'a' 'img' 'div' 'span' )
   not_included=""
@@ -76,9 +76,9 @@ check_html_tags() {
     fi
   done
   if [ "$not_included" ]; then
-    printf " - The following HTML tags are missing: $not_included"
+    printf " - ❌ The following HTML tags are missing: $not_included"
   else
-    printf " - PASS: All required HTML tags are included."
+    printf " - ✅ All requested HTML tags are used."
   fi
   rm backup.html
   printf "\n"
@@ -101,7 +101,6 @@ run_htmlhint() {
 
 }
 
-
   REVIEWOUTPUT=./review.md
   if [ -f "$REVIEWOUTPUT" ]; then
   rm review.md
@@ -115,7 +114,7 @@ run_htmlhint() {
 
   printf "## Intro to Programming - Git, HTML & CSS \n\n" >> "$REVIEWOUTPUT"
   
-
+  printf "### Objectives Check \n" >> "$REVIEWOUTPUT"
   check_html_tags >> "$REVIEWOUTPUT"
   check_css >> "$REVIEWOUTPUT"
   readme_exists >> "$REVIEWOUTPUT"
