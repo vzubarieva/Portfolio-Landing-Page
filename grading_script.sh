@@ -1,17 +1,11 @@
 #! /bin/bash
 
-# Don't change anything in here! 
-
 check_commit_history() {
-  printf "### Commit History:\n"
-
+  printf "### Commit History \n"
   printf "#### Total Commits: "
   git rev-list --count main | tail -1
   printf "\n"
-
   git log | grep --line-buffered "Date"
-
-  
 }
 
 readme_exists() {
@@ -33,7 +27,7 @@ readme_exists() {
         printf "- ✅ README has all required sections based on header title. Please make sure that each section has information and you have removed all placeholder information. (make sure you have a link to your GitHub Pages)"
       fi
   else
-    printf "- ❌ No README.md file in the root directory found!"
+    printf " - ❌ No README.md file in the root directory found!"
   fi
   printf "\n"
 }
@@ -41,11 +35,10 @@ readme_exists() {
 check_ghpages() {
   val=$(git branch -r)
   ghpages="origin/gh-pages"
-
   if [[ "$val" == *"$ghpages"* ]]; then
-    printf " - PASS: There is a gh-pages branch! Great! Please go to the url and check that it works"
+    printf " - ✅ gh-pages branch found. Please check the url to make sure it works. Add url to README."
   else
-    printf "FAIL - no gh-pages yet"
+    printf " - ❌ no gh-pages branch found"
   fi
   printf "\n"
 }
@@ -135,6 +128,7 @@ run_htmlhint() {
   readme_exists >> "$REVIEWOUTPUT"
   check_ghpages >> "$REVIEWOUTPUT"
 
+  printf "\n" >> "$REVIEWOUTPUT"
   run_htmlhint >> "$REVIEWOUTPUT"
 
   check_commit_history >> "$REVIEWOUTPUT"
