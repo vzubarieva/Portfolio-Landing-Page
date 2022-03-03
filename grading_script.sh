@@ -85,7 +85,18 @@ check_html_tags() {
 }
 
 run_htmlhint() {
-  npx htmlhint "**/*.html"
+  printf "### HTML File Check \n"
+
+  printf "**Description:** htmlhint checks all html files in your project and outputs any errors below. \n"
+  printf "Each possible error is printed on a new line. \n"
+  printf "You may need to turn off word wrap (alt-z or View -> Word Wrap) for better readability. \n"
+  printf "If curious, here is more info on what errors this script checks for. \n\n"
+  printf "**Be sure to resolve all warnings in your terminal as well.** \n"
+  printf "These warnings are likely html formatting issues such as missing or misplaced tags, or improper indentation. \n"
+  printf "Nothing in your terminal means there are no warnings. \n\n"
+
+  printf "#### HTML Errors: \n"
+  npx htmlhint "**/*.html" -f compact
 }
 
 
