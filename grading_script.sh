@@ -37,7 +37,7 @@ check_ghpages() {
 
 check_css() {
   if [ -f css/styles.css ]; then
-    printf " - BEST PART! Stylesheet included in correct place (tidy organized)"
+    printf " - ✅ Stylesheet included in correct place"
     printf "\n"
     styles=( 'float' 'padding' 'margin' 'border' )
     not_in_sheet=""
@@ -49,12 +49,12 @@ check_css() {
       fi
     done
     if [ "$not_in_sheet" ]; then
-      printf " - These properties are missing from the stylesheet: $not_in_sheet"
+      printf " - ❌ These properties are missing from the stylesheet: $not_in_sheet"
     else
-      printf " - PASS: All rules for floats and box models are included. (Verify that floats/box model work in browser.)"
+      printf " - ✅ Using all requested css properties: floats, padding, margin, border."
     fi
   else
-    printf " - FAIL: No stylesheet named styles.css included (might be called different name)."
+    printf " - ❌ No stylesheet found. Looking for a file named styles.css in the css folder"
   fi
   printf "\n"
 }
