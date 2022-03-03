@@ -91,12 +91,14 @@ run_htmlhint() {
   printf "Each possible error is printed on a new line. \n"
   printf "You may need to turn off word wrap (alt-z or View -> Word Wrap) for better readability. \n"
   printf "If curious, here is more info on what errors this script checks for. \n\n"
-  printf "**Be sure to resolve all warnings in your terminal as well.** \n"
-  printf "These warnings are likely html formatting issues such as missing or misplaced tags, or improper indentation. \n"
-  printf "Nothing in your terminal means there are no warnings. \n\n"
 
   printf "#### HTML Errors: \n"
   npx htmlhint "**/*.html" -f compact
+  printf "If empty then no errors found. \n"
+  printf "**Be sure to resolve all warnings in your terminal as well.** \n"
+  printf "These warnings are likely html formatting issues such as missing or misplaced tags, or improper indentation. \n"
+  printf "Nothing in terminal means no warnings. \n\n"
+
 }
 
 
@@ -113,13 +115,15 @@ run_htmlhint() {
 
   printf "## Intro to Programming - Git, HTML & CSS \n\n" >> "$REVIEWOUTPUT"
   
-  check_commit_history >> "$REVIEWOUTPUT"
-  printf "\n" >> "$REVIEWOUTPUT"
 
   check_html_tags >> "$REVIEWOUTPUT"
   check_css >> "$REVIEWOUTPUT"
   readme_exists >> "$REVIEWOUTPUT"
   check_ghpages >> "$REVIEWOUTPUT"
+
   run_htmlhint >> "$REVIEWOUTPUT"
+
+  check_commit_history >> "$REVIEWOUTPUT"
+  printf "\n" >> "$REVIEWOUTPUT"
 
 
