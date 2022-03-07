@@ -71,7 +71,7 @@ check_html_tags() {
   if [ "$(uname)" == "Darwin" ] || [ "$(uname)" == "Linux" ]; then
     tidy -quiet -asxml -indent -wrap 0 --force-output true --hide-comments 1 *.html > backup.html
   else
-    --hide-comments 1 *.html > backup.html
+    sed '/-->$/d' *.html > backup.html
   fi
 
   elements=( 'p' 'h[1-6]' 'ul' 'ol' 'li' 'em' 'strong' 'a' 'img' 'div' 'span' )
