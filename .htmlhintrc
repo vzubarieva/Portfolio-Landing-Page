@@ -1,6 +1,15 @@
 {
+  "alt-require": true,
   "doctype-first": true,
+
+  "attr-no-unnecessary-whitespace": true,
   "attr-value-double-quotes": false,
   "attr-value-single-quotes": false,
-  "attr-value-not-empty": false
+  "attr-value-not-empty": true,
+  "alt-require": true,
+
+  "tag-pair": true,
+  "tagname-lowercase": true,
+
+  "id-unique": true
 }
