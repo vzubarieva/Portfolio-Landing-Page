@@ -25,12 +25,13 @@ You may not know what each of these steps mean but that is okay. We will learn m
 
 1.  In your terminal, navigate to the top level directory of the project and type `npm install` (just once, you don't need to repeat this step again)
 
-2. Grant yourself permission to run grading script (you should only have to do this once): 
-  * run `chmod +x path/to/grading_script.sh` to grant yourself permission to execute this file.
-  * If still have permission denied error, try `chmod u+x path/to/grading_script.sh` 
+2. In your terminal, in the top level directory, run `npm run review` and a file called review.md will appear (you can do this step as many times as you like to get updated feedback)
 
-3. Run grading script (you can do this step as many times as you like to get updated feedback)
-  * In your terminal, in the top level directory, run `./grading_script.sh`
+**If** you run into any issues with the above command you can try running the script yourself by:
+
+1. In your terminal, in the top level directory, run `chmod +x ./grading_script.sh` If you're still getting permission errors, you can try `chmod +x path/to/grading_script.sh`. (You should only have to do this once)
+
+2. Then in your terminal, in the top level directory, run `./grading_script.sh` to create a review.md file (you can run this command as many times as you like to get updated feedback)
 
 #### About the Review.md doc:
 

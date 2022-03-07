@@ -4,7 +4,7 @@
   "description": "template for first code review at Epicodus",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "review": "echo 'Success! review.md file created.'; chmod +x ./grading_script.sh; ./grading_script.sh"
   },
   "author": "Epicodus",
   "license": "ISC",
