@@ -3,8 +3,8 @@
 ## Code Review Template: Git, HTML & CSS
 
 ### Requirements: 
-- node 12 or higher, npm 6 or higher as part of the preowrk
-
+- Node v12 or higher (check with `node -v` in terminal)
+- npm v6 or higher (check with `npm -v` in terminal)
 
 ### Instructions:
 
