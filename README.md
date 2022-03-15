@@ -14,16 +14,12 @@
 
 ### Instructions to get Repo:
 
-1. **fork [this repo]()**
-<br> 
+1. **fork [this repo](https://github.com/epicodus-lessons/1_code_review)**<br>
 how: Click the button named `Fork` in the upper right of the repo. Select your GitHub profile when asked where should the repo be forked to. You now have a forked copy of our repo in your GitHub repositories.
-<br>
-<br>
-2. **rename the repo now in your GitHub account**
-<br>
+
+2. **rename the repo now in your GitHub account**<br>
 how: In your repo, go to Settings. The option to change the repo's name should be the first option you see under General.
-<br>
-<br>
+
 3. **clone your repo to start work on the code review**
 
 ---
@@ -98,22 +94,18 @@ Be aware that your Teacher may have additional resubmission requirements after r
 
 ---
 
-#### Troubleshooting 
+### Troubleshooting 
 
 Here is a list of possible issues you may run into and how to work around them:
 
-1. "My terminal says there is some error in `node_modules` folder
-<br>
+1. *"My terminal says there is some error in `node_modules` folder"*<br>
 possible fix: Delete the node_modules folder and run `npm install` again
 
-2. When I run `npm run review` I get some kind of error
-<br>
+2. *"When I run `npm run review` I get some kind of error"*<br>
 possible fix: Try running the script yourself. In your terminal, the top level directory, type `chmod +x grading_script.sh`, hit enter, then type ` ./grading_script.sh`. This should create a review.md file for you. You can run `./grading_script.sh` as many times as you like for updated feedback.
 
-3. I am getting permission issues. My terminal says I do not have permission.
-<br>
+3. *"I am getting permission issues. My terminal says I do not have permission."*<br>
 possible fix: In your terminal, in the top level directory, type `chmod +x grading_script.sh`. If that doesn't work, you can try `chmod u+x grading_script.sh` After that run the grading script as usual.
 
-4. There is something going wrong not described here.
-<b>
+4. *"There is something going wrong not described here."*<br>
 If all else fails, you don't need to use the grading script to complete the project. Do your best. Make sure you are checking your process against the list of objectives outlined in the prompt. Leave a note for your Teacher that you were unable to use the grading scripts.
