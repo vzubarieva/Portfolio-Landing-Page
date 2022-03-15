@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "template for first code review at Epicodus",
   "main": "index.js",
-  "scripts": {
-    "review": "echo 'Success! review.md file created.'; chmod +x ./grading_script.sh; ./grading_script.sh"
+  "scripts": { "review": "chmod +x ./grading_script.sh; ./grading_script.sh; echo 'Success! review.md file created.'"
   },
   "author": "Epicodus",
   "license": "ISC",
