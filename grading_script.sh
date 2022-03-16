@@ -3,9 +3,9 @@
 check_commit_history() {
   printf "### Commit History \n"
   printf "#### Total Commits: "
-  git rev-list --count main | tail -1
+  git rev-list --count HEAD ^origin | tail -1
   printf "\n"
-  git log | grep --line-buffered "Date"
+  git log HEAD ^origin | grep --line-buffered "Date"
 }
 
 readme_exists() {
