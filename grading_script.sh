@@ -21,10 +21,10 @@ readme_exists() {
         not_in_readme+="$header  "
       fi
     done
-      if [ "$not_in_sheet" ]; then
+      if [ ! "$not_in_sheet" ]; then
         printf " - ❌ These sections are missing from your README (This is an exact match check): $not_in_readme"
       else
-        printf "- ✅ README has all required sections based on header title. Please make sure that each section has information and you have removed all placeholder information. (make sure you have a link to your GitHub Pages)"
+        printf " - ✅ README has all required sections based on header title. Please make sure that each section has information and you have removed all placeholder information. (make sure you have a link to your GitHub Pages)"
       fi
   else
     printf " - ❌ No README.md file in the root directory found!"
