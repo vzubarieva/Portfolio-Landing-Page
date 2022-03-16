@@ -1,9 +1,10 @@
 {
-  "name": "ft_wk1_and_pt_wk2_code_review",
+  "name": "1_code_review",
   "version": "1.0.0",
   "description": "template for first code review at Epicodus",
   "main": "index.js",
-  "scripts": { "review": "chmod +x ./grading_script.sh; ./grading_script.sh; echo 'Success! review.md file created.'"
+  "scripts": { 
+    "review": "chmod +x ./grading_script.sh; ./grading_script.sh; echo 'Success! review.md file created.'"
   },
   "author": "Epicodus",
   "license": "ISC",
