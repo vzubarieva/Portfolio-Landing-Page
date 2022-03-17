@@ -1,11 +1,51 @@
 #! /bin/bash
 
-check_commit_history() {
-  printf "### Commit History \n"
-  printf "#### Total Commits: "
-  git rev-list --count HEAD ^origin | tail -1
+fork="b0ab80d56f9ed22fd4e94ac4c397237111d0a4d2"
+
+check_commit_count() {
+  printf "### Total Commits: "
+  git rev-list --count HEAD ^$fork | tail -1
   printf "\n"
-  git log HEAD ^origin | grep --line-buffered "Date"
+}
+
+check_commit_ts_diff() {
+  printf "### Time between each commit: \n"
+  printf "Commit --> Previous Commit \n"
+  printf "date hour:minute:second --> date hour:minute:second  min:sec=  minutes:seconds \n\n"
+
+  for ix in `git rev-list HEAD ^$fork`; do 
+    thists=`git log $ix -n 1 --format=%ct`; 
+    prevts=`git log $ix~1 -n 1 --format=%ct 2>/dev/null`; 
+    if [ ! -z "$prevts" ] ; then
+      thisd=`date -d @$thists +'%d'`
+      prevd=`date -d @$prevts +'%d'`
+      if (("$thisd" > "$prevd")) ; then
+        echo "DIFFERENT DAY"
+      else
+        delta=$(( $thists - $prevts )); 
+        echo `date -d @$thists +'%Y-%m-%d %H:%M:%S'` "-->"  \
+            `date -d @$prevts +'%Y-%m-%d %H:%M:%S'` " min:sec= " \
+            `date -d @$delta +'%M:%S'`;
+      fi;
+    fi; 
+  done
+  printf "\n"
+}
+
+check_commit_history() {
+  printf "### Commit History:\n"
+  git log HEAD ^$fork|grep --line-buffered "Date"
+}
+
+check_main_exists() {
+  val=$(git branch)
+  if [ "$val" == "master" ] ; then
+    print "Your default branch should be called main. Instead found master."
+  else
+    check_commit_count
+    check_commit_ts_diff
+    check_commit_history
+  fi;
 }
 
 readme_exists() {
@@ -131,7 +171,7 @@ run_htmlhint() {
   printf "\n" >> "$REVIEWOUTPUT"
   run_htmlhint >> "$REVIEWOUTPUT"
 
-  check_commit_history >> "$REVIEWOUTPUT"
+  check_main_exists >> "$REVIEWOUTPUT"
   printf "\n" >> "$REVIEWOUTPUT"
 
 
