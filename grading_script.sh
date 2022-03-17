@@ -1,6 +1,6 @@
 #! /bin/bash
 
-fork="b0ab80d56f9ed22fd4e94ac4c397237111d0a4d2"
+fork="v1.0"
 
 check_commit_count() {
   printf "### Total Commits: "
