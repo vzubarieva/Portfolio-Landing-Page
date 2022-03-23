@@ -3,7 +3,8 @@
 ---
 
 ## Code Review: Git, HTML & CSS
-updated: March 15th, 2022
+updated: March 23rd, 2022 <br>
+v1.2
 
 ---
 
@@ -53,15 +54,17 @@ Your project should look like this (not including boostrap):
 ```bash
 ├── css
 │   └── styles.css
-├── grading_script.sh
-├── index.html
 ├── node_modules
 │   ├── (Don't think about what's in here)
+├── grading_script.sh
+├── .htmlhintrc
+├── index.html
 ├── package.json
 ├── package-lock.json
 ├── README.md
 
 ```
+Note: After running the steps above, git may track changes in package.json and in package-lock.json. That's okay. Make a git commit as usual. 
 
 ---
 

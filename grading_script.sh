@@ -1,6 +1,6 @@
 #! /bin/bash
 
-fork="v1.1"
+fork="v1.2"
 
 check_commit_count() {
   printf "### Total Commits: "
@@ -12,6 +12,7 @@ check_commit_ts_diff() {
   printf "### Time between each commit: \n"
   printf "Commit --> Previous Commit \n"
   printf "date hour:minute:second --> date hour:minute:second  min:sec=  minutes:seconds \n\n"
+  printf "(ignore time difference in the first listed item after your very first commit - it's wonky)"
 
   for ix in `git rev-list HEAD ^$fork`; do 
     thists=`git log $ix -n 1 --format=%ct`; 
@@ -61,7 +62,7 @@ readme_exists() {
         not_in_readme+="$header  "
       fi
     done
-      if [ "$not_in_sheet" ]; then
+      if [ "$not_in_readme" ]; then
         printf " - ❌ These sections are missing from your README (This is an exact match check): $not_in_readme"
       else
         printf " - ✅ README has all required sections based on header title. Please make sure that each section has information and you have removed all placeholder information. (make sure you have a link to your GitHub Pages)"
@@ -137,8 +138,7 @@ run_htmlhint() {
 
   printf "**Description:** htmlhint checks all html files in your project and outputs any errors below. \n"
   printf "Each possible error is printed on a new line. \n"
-  printf "You may need to turn off word wrap (alt-z or View -> Word Wrap) for better readability. \n"
-  printf "If curious, here is more info on what errors this script checks for. \n\n"
+  printf "You may need to turn off word wrap (alt-z or View -> Word Wrap) for better readability. \n\n"
 
   printf "#### HTML Errors: \n"
   npx htmlhint "**/*.html" -f compact
