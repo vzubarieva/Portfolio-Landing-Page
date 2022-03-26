@@ -7,8 +7,12 @@ h1 {
   font-size: 40px
   line-height: 50px
 }
+.section {
+  padding: 10px;
+  margin:10px;
+}
 
-h2 {
+h2.section-header {
   color:black;
   text-align: center;
   font-style: italic
@@ -16,4 +20,15 @@ h2 {
   font-family: Georgia
   font-size: 300px
   line-height: 50px
+}
+
+img {
+  width: 254px;
+  height: 185px;
+  object-fit: cover;
+  float: center
+}
+
+.footer {
+  border: 1px solid blue
 }
