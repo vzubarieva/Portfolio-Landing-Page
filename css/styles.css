@@ -9,7 +9,8 @@ h1 {
 }
 .section {
   padding: 10px;
-  margin:10px;
+  margin: auto;
+  box-sizing: border-box;
 }
 
 h2.section-header {
@@ -22,7 +23,7 @@ h2.section-header {
   line-height: 50px
 }
 
-img {
+.centered-image {
   width: 254px;
   height: 185px;
   object-fit: cover;
@@ -31,4 +32,8 @@ img {
 
 .footer {
   border: 1px solid blue
+}
+
+.hobbies {
+  color: brown;
 }
