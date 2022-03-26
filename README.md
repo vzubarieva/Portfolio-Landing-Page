@@ -1,23 +1,23 @@
 # _Portfolio_
 
 #### By _**Viktoriia Zubarieva**_
+## Description
 
-#### _Portfolio website showcasing my projects and information about myself_
+ This portfolio website shows information about myself. There user can find projects with links to repositories on github, section about my background.
 
+_https://vzubarieva.github.io/Portfolio-Landing-Page/_
 ## Technologies Used
 
 * _HTML_
 * _CSS_
-
-## Description
-
- This portfolio website shows information about myself. There user can find projects with links to repositories on github, section about my background.
 
 ## Setup/Installation Requirements
 
 * _Clone this repository to your desktop_
 * _Navigate to the top level of the directory_
 * _Open index.html_ 
+
+_https://vzubarieva.github.io/Portfolio-Landing-Page/_
 
 ## Known Bugs
 
