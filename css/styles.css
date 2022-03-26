@@ -1,0 +1,19 @@
+h1 {
+  color:blue;
+  text-align: center;
+  font-style: italic
+  font-weight: 500px;
+  font-family: Georgia
+  font-size: 40px
+  line-height: 50px
+}
+
+h2 {
+  color:black;
+  text-align: center;
+  font-style: italic
+  font-weight: 500px;
+  font-family: Georgia
+  font-size: 300px
+  line-height: 50px
+}
