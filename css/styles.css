@@ -1,11 +1,11 @@
 h1 {
   color:blue;
   text-align: center;
-  font-style: italic
-  font-weight: 500px;
-  font-family: Georgia
-  font-size: 40px
-  line-height: 50px
+  font-style: italic;
+  font-weight: 500;
+  font-family: Georgia;
+  font-size: 40px;
+  line-height: 40px;
 }
 .section {
   padding: 10px;
@@ -16,24 +16,31 @@ h1 {
 h2.section-header {
   color:black;
   text-align: center;
-  font-style: italic
-  font-weight: 500px;
-  font-family: Georgia
-  font-size: 300px
-  line-height: 50px
+  font-style: italic;
+  font-weight: 600;
+  font-family: Georgia;
+  font-size: 30px;
+  line-height: 30px;
 }
 
 .centered-image {
-  width: 254px;
+  width: 30%;
   height: 185px;
   object-fit: cover;
-  float: center
+  margin: auto;
+  display: block;
 }
 
 .footer {
-  border: 1px solid blue
+  border: 1px solid blue;
+  float: left;
+  padding-left: 50%;
 }
 
 .hobbies {
   color: brown;
+}
+
+ul li span {
+  padding-left: 5px;
 }
