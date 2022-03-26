@@ -25,7 +25,6 @@ h2.section-header {
 
 .centered-image {
   width: 30%;
-  height: 185px;
   object-fit: cover;
   margin: auto;
   display: block;
@@ -34,7 +33,9 @@ h2.section-header {
 .footer {
   border: 1px solid blue;
   float: left;
-  padding-left: 50%;
+  margin-left: 50%;
+  padding: 5px 20px;
+  margin-bottom: 20px;
 }
 
 .hobbies {
