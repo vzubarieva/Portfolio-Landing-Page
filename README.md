@@ -5,7 +5,7 @@
 
  This portfolio website shows information about myself. There user can find projects with links to repositories on github, section about my background.
 
-_https://vzubarieva.github.io/Portfolio-Landing-Page/_
+_https://vzubarieva.github.io/portfolio/_
 ## Technologies Used
 
 * _HTML_
@@ -17,7 +17,7 @@ _https://vzubarieva.github.io/Portfolio-Landing-Page/_
 * _Navigate to the top level of the directory_
 * _Open index.html_ 
 
-_https://vzubarieva.github.io/Portfolio-Landing-Page/_
+_https://vzubarieva.github.io/portfolio/_
 
 ## Known Bugs
 
